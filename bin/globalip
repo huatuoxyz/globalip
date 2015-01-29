@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'net/http'
+require 'json'
+uri      = URI('http://jsonip.com/')
+response = Net::HTTP.get_response(uri)
+data     = response.body
+result   = JSON.parse(data)
+ip = result['ip']
+puts ip
