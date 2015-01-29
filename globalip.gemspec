@@ -8,5 +8,5 @@ Gem::Specification.new do |s|
   s.email                  = 'dongriat@gmail.com'
   s.homepage               = 'https://github.com/dongri/globalip'
   s.files                  = `git ls-files`.split($\)
-  s.executables            = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  s.executables            = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
 end
